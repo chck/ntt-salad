@@ -2,6 +2,7 @@
 all: help
 
 .PHONY: init ## Initialize dependencies
+init:
 	pip install pipenv
 	pipenv install --dev
 

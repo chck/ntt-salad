@@ -2,9 +2,11 @@ language: python
 python:
     - "3.6"
  
-# command to install dependencies
-install: "make"
+cache:
+    - pip
+
+install: 
+    - make init
  
-# command to run tests
 script:
     - make test

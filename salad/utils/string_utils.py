@@ -15,6 +15,9 @@ def remove_br(_text: str) -> str:
 
 
 def remove_url(_text: str) -> str:
+    """Reference:
+    http://www.noah.org/wiki/RegEx_Python#URL_regex_pattern
+    """
     _text = re.sub(r'http[s]?:\/\/(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+', '', _text,
                    flags=re.MULTILINE)
     _text = re.sub(r'\s+$', '', _text, flags=re.MULTILINE)

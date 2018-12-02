@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "1c530cee64e338233dac519ecd30e9780017fc0765edbf4e765e2854b0f617c5"
+            "sha256": "67b9c0a085a14e2a3eaf09009df889f2ba1a3901eb6497dbec4a3e0cf6cefd68"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -142,6 +142,13 @@
                 "sha256:d02e0f9b04c500cde6637c11ad7c72671f359b87b9fe924b2383649d8841db7c"
             ],
             "version": "==3.0.1"
+        },
+        "mecab-python3": {
+            "hashes": [
+                "sha256:5aca4d0d196161e41452b89921042c0e61a6b7e7e9373211c0c1c50d1809055d"
+            ],
+            "index": "pypi",
+            "version": "==0.996.1"
         },
         "more-itertools": {
             "hashes": [

@@ -8,6 +8,7 @@ init:
 
 .PHONY: test ## Run test
 test:
+	pipenv check --style . --max-line-length 120
 	pipenv run py.test tests
 
 .PHONY: help ## View help

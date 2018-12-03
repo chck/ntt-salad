@@ -10,18 +10,19 @@ from salad.utils.string_utils import (
 
 def test_clean():
     noisy_text = '''
-    100年勤めたNTTを退職しました。http://bit.ly/abcde
-    以上が転職した経緯です。
+    改行とURLつきテキストです。http://bit.ly/abcde
+    改行とURLつきテキストです。
     '''
-    expected = '100年勤めたNTTを退職しました。 以上が転職した経緯です。'
+    expected = '改行とURLつきテキストです。 改行とURLつきテキストです。'
     actual = clean(noisy_text)
     assert expected == actual
 
 
 def test_remove_br():
     text_with_break = '''
-    100年勤めたNTTを退職しました。
-    以上が転職した経緯です。
+    改行つきテキストです。
+    改行つきテキストです。
+    改行つきテキストです。
     '''
     actual = remove_br(text_with_break)
     assert '\n' not in actual

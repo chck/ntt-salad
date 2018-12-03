@@ -10,8 +10,7 @@ def test_tokenize():
     以上が転職した経緯です。
     '''
     expected = '長年 勤め た NTT を 退職 し まし た 。 以上 が 転職 し た 経緯 です 。'
-    tokenizer = Tokenizer()
-    actual = tokenizer.parse(noisy_text)
+    actual = Tokenizer().parse(noisy_text)
     assert expected == actual
 
 

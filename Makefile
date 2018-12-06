@@ -1,3 +1,6 @@
+IMAGE:=asia.gcr.io/$(PROJECT_ID)/ntt-salad
+COMMIT_SHA:=$(shell git log -1 --format=%H)
+
 .PHONY: all
 all: help
 
@@ -10,6 +13,10 @@ init:
 test:
 	pipenv check --style . --max-line-length 120
 	pipenv run py.test tests
+
+.PHONY: build ## Build image
+build:
+	docker build . -t $(IMAGE):$(COMMIT_SHA)
 
 .PHONY: help ## View help
 help:
